@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{70DBA674-32D3-4455-9181-B5A392E185DD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SR.CML.Core</RootNamespace>
+    <AssemblyName>SR.CML.Core</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\3dParty\Log4Net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.3.9345, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\3dParty\NUnit\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\ActivateAction.cs" />
+    <Compile Include="Actions\DeactivateAllAction.cs" />
+    <Compile Include="Actions\InitializeAction.cs" />
+    <Compile Include="Actions\InstanciateAction.cs" />
+    <Compile Include="Actions\PluginsCollectorAction.cs" />
+    <Compile Include="Core.cs" />
+    <Compile Include="Exceptions\CreateInstanceException.cs" />
+    <Compile Include="Helpers\DependancyResolverItem.cs" />
+    <Compile Include="Actions\ITraverseAction.cs" />
+    <Compile Include="Helpers\PluginDependancyResolver.cs" />
+    <Compile Include="Helpers\PluginDescription.cs" />
+    <Compile Include="Helpers\PluginExplorer.cs" />
+    <Compile Include="Helpers\PluginHolder.cs" />
+    <Compile Include="PluginManager.cs" />
+    <Compile Include="Helpers\PluginTreeTraverser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\ActionTest.cs" />
+    <Compile Include="Tests\CoreTest.cs" />
+    <Compile Include="Tests\DependancyResolverTest.cs" />
+    <Compile Include="Tests\Plugins\Plugin1DependsOnCore.cs" />
+    <Compile Include="Tests\Plugins\Plugin2DependsOnCore.cs" />
+    <Compile Include="Tests\Plugins\Plugin3DependsOn1.cs" />
+    <Compile Include="Tests\Plugins\Plugin4DependsOn3AndCore.cs" />
+    <Compile Include="Tests\Plugins\Plugin5DependsOn3And1AndCore.cs" />
+    <Compile Include="Tests\Plugins\PluginCore.cs" />
+    <Compile Include="Tests\Plugins\TestPlugin.cs" />
+    <Compile Include="Tests\TreeTraverserTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SR.CML.Core.Interfaces\SR.CML.Core.Interfaces.csproj">
+      <Project>{20AEB624-8FFC-4680-A9A8-30768FDC9A77}</Project>
+      <Name>SR.CML.Core.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

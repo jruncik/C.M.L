@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SR.CML.CommonPlugins.CarDriverManager.InSimCar">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAACgACAEA2AABGAAARAAAAAAAAAAAJAABABAAAA=</HashCode>
+      <FileName>CarDriverManager\InSimCar.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SR.CML.CommonPlugins.CarDriverManager.InSimDriver">
+    <Position X="2.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAABBACREAkBgAARAQAAAAAQAABEAAAAIAAAAAFA=</HashCode>
+      <FileName>CarDriverManager\InSimDriver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SR.CML.CommonPlugins.CarDriverManager.CarDriverSimple">
+    <Position X="5.5" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAgAAAAEAAAEABAAAAAAAAAAAAAABAAAAAABAA=</HashCode>
+      <FileName>CarDriverManager\CarDriverManagerSimple.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SR.CML.CommonPlugins.CarDriverManager.CarDriverManagerExtended">
+    <Position X="8" Y="7.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAgAAAAEAAAEABAAAAAAAAAAAAAABAAAAAABAA=</HashCode>
+      <FileName>CarDriverManager\CarDriverManagerExtended.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SR.CML.CommonPlugins.CarDriverManager.CarDriverManagerBase">
+    <Position X="6.25" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>QLAAIAAgACJGEsBEEABACAAAAMAhCQAgABAAAAQABAA=</HashCode>
+      <FileName>CarDriverManager\CarDriverManagerBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

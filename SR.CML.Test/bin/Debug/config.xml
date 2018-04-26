@@ -1,0 +1,27 @@
+<CmlConfiguration  >
+  <Host>
+    <IP>127.0.0.1</IP>
+    <AdminisratorPassword>3ne494ek</AdminisratorPassword>
+    <InSimPort>29999</InSimPort>
+    <CmlMode>Simple</CmlMode>
+  </Host>
+  <EventConfiguration>
+    <ServerPassword />
+    <Track>BL1</Track>
+    <Wheather>Day</Wheather>
+    <Wind>Off</Wind>
+    <MaxCars>0</MaxCars>
+  </EventConfiguration>
+  <CarsAndDriversConfiguration>
+    <Cars />
+    <CarTypes />
+  </CarsAndDriversConfiguration>
+  <CzLeagueConfig>
+    <QualifyMin>20</QualifyMin>
+    <RaceLaps>16</RaceLaps>
+    <Admins>
+      <AdminLfsName>BabyOnWheels</AdminLfsName>
+    </Admins>
+    <SwapFirstDrivers>10</SwapFirstDrivers>
+  </CzLeagueConfig>
+</CmlConfiguration>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+
+	<configSections>
+		<section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler, log4net" />
+	</configSections>
+	
+	<log4net>
+		<appender name="ConsoleAppender" type="log4net.Appender.ConsoleAppender" >
+			<layout type="log4net.Layout.PatternLayout">
+				<conversionPattern value="%date [%thread] %-5level %logger: %message%newline" />
+			</layout>
+		</appender>
+
+		<appender name="LogFileAppender" type="log4net.Appender.FileAppender">
+			<file value="SR_CML.log"/>
+			<layout type="log4net.Layout.PatternLayout">
+				<header value="----------------------------------------------Started-----------------------------------------------------------&#13;&#10;" />
+				<footer value="----------------------------------------------Stopped-----------------------------------------------------------&#13;&#10;" />
+				<conversionPattern value="%date [%thread] %-5level %logger: %message%newline" />
+			</layout>
+		</appender>
+
+		<logger name="SR.CML">
+			<level value="ALL" />
+			<appender-ref ref="LogFileAppender" />
+		</logger>
+<!--
+		<logger name="FullMotion.LiveForSpeed">
+			<level value="ALL" />
+			<appender-ref ref="LogFileAppender" />
+		</logger>
+-->
+
+	</log4net>
+
+</configuration>

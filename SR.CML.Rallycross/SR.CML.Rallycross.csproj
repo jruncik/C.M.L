@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5516D624-8419-4854-A060-889828865524}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SR.CML.Rallycross</RootNamespace>
+    <AssemblyName>SR.CML.Rallycross</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\3dParty\Log4Net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.3.9345, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\3dParty\NUnit\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DriverInfo.cs" />
+    <Compile Include="GroupManager.cs" />
+    <Compile Include="ActivatingNextGroupEventArgs.cs" />
+    <Compile Include="Rallycross.cs" />
+    <Compile Include="RallycrossDirector.cs" />
+    <Compile Include="RallycrossDirectorMenu.cs" />
+    <Compile Include="RallycrossPlugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Group.cs" />
+    <Compile Include="Results\DriverResult.cs" />
+    <Compile Include="Results\HeatResult.cs" />
+    <Compile Include="RallycrossSate.cs" />
+    <Compile Include="Results\Results.cs" />
+    <Compile Include="Results\ResultsView.cs" />
+    <Compile Include="Tests\HeatResultTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\3dParty\LFSLib.NET\LFSLib\LFSLib.csproj">
+      <Project>{4A90281C-B741-4539-B27E-45BEBEEEC513}</Project>
+      <Name>LFSLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SR.CML.Common\SR.CML.Common.csproj">
+      <Project>{B8C31E02-B101-41BD-A302-02376CDF9665}</Project>
+      <Name>SR.CML.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SR.CML.Core.Interfaces\SR.CML.Core.Interfaces.csproj">
+      <Project>{20AEB624-8FFC-4680-A9A8-30768FDC9A77}</Project>
+      <Name>SR.CML.Core.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" "$(SolutionDir)SR.CML.Test\$(OutDir)Plugins"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

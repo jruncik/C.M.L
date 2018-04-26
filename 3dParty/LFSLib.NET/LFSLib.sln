@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTester", "ConsoleTester\ConsoleTester.csproj", "{C78EB080-70C4-457B-AA19-2E28C0032180}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LFSLib", "LFSLib\LFSLib.csproj", "{4A90281C-B741-4539-B27E-45BEBEEEC513}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C78EB080-70C4-457B-AA19-2E28C0032180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C78EB080-70C4-457B-AA19-2E28C0032180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C78EB080-70C4-457B-AA19-2E28C0032180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C78EB080-70C4-457B-AA19-2E28C0032180}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A90281C-B741-4539-B27E-45BEBEEEC513}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A90281C-B741-4539-B27E-45BEBEEEC513}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A90281C-B741-4539-B27E-45BEBEEEC513}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A90281C-B741-4539-B27E-45BEBEEEC513}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
